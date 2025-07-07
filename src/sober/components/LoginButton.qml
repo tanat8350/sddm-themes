@@ -20,7 +20,7 @@ import QtQuick.Controls 2.0
 
 Button {
     id: control
-    activeFocusOnTab : false
+    activeFocusOnTab : true
     padding: 6
     spacing: 6
     hoverEnabled: true
@@ -50,7 +50,8 @@ Button {
         )
         border.color: (control.down 
                 ? conf("border.color.press") : control.hovered 
-                ? conf("border.color.hover") : conf("border.color.normal")
+                ? conf("border.color.hover") : control.activeFocus 
+                ? conf("border.color.focus") : conf("border.color.normal")
         )
         border.width: (control.down 
                 ? conf("border.size.press") : control.hovered 

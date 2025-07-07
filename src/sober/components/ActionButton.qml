@@ -62,7 +62,12 @@ Item {
             samples: 32
             radius: conf("shadow.radius")
             spread: conf("shadow.spread")
-            color: conf("shadow.color")
+            color: (mouseArea.pressed
+                ? conf("shadow.color.press")
+                : control.focus
+                    ? mouseArea.containsMouse ? conf("shadow.color.hover") : conf("shadow.color.focus")
+                    : mouseArea.containsMouse ? conf("shadow.color.hover") : conf("shadow.color.normal")
+                )
         }
     }
 
