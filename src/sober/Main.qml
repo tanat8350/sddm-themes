@@ -39,7 +39,11 @@ Skel {
     // Objects
     // ===================
 
-    Screensaver { id: screensaver; anchors.fill: parent }
+    Screensaver {
+        id: screensaver
+        anchors.fill: parent
+        visible: root.conf("Screensaver")
+    }
     
     Login {
         id: login
@@ -50,7 +54,7 @@ Skel {
         //Rectangle {anchors.fill: parent; color: "red"; opacity: 0.1} //DEBUG
     }
 
-    Clock { id: clock; parent: free }
+    Clock { id: clock; parent: free; anchors.margins: config.Margins || 0 }
         
     // Session and Keyboard buttons.
     RowLayout {
@@ -59,7 +63,7 @@ Skel {
         parent: free
         height: 30
         spacing: 4
-        anchors.margins: 4
+        anchors.margins: config.CornerMargins || 0
         LayoutMirroring.enabled: isMirror
         SessionButton {
             id: sessionButton
@@ -85,7 +89,7 @@ Skel {
     RowLayout {
     id: actionButton
     parent: free
-    anchors.margins: 0
+    anchors.margins: config.Margins || 0
     spacing: 32
         ActionButton {
             id: suspendButton
@@ -146,6 +150,9 @@ Skel {
             }
         }
     }
+
+    // Button for switching between views
+    // Commenting this will disable the feature
 
     // Button for switch in "full" view.
     ActionButton {
