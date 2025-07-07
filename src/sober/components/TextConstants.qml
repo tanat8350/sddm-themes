@@ -25,7 +25,7 @@
 import QtQuick 2.0
 
 QtObject {
-    readonly property string capslockWarning:   qsTr("Warning, Caps Lock is ON!")
+    readonly property string capslockWarning:   qsTr("Caps lock on")
     readonly property string layout:            qsTr("Layout")
     readonly property string login:             qsTr("Login")
     readonly property string loginFailed:       qsTr("Login failed")
