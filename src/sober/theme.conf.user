@@ -1,4 +1,36 @@
 [General]
 type=color
-color=#1d1e19
-background="components/artwork/background.jpg"
+color=#000000
+
+# option boxes
+[combobox]
+text.color.normal=#ffffff
+text.color.hover=#ffffff
+text.color.press=#ffffff
+text.color.focus=#ffffff
+
+# options
+[combobox.menu]
+text.color.normal=#ffffff
+text.color.hover=#ffffff
+text.color.press=#ffffff
+text.color.focus=#ffffff
+
+# login button
+[button]
+text.color.normal=#ffffff
+text.color.hover=#ffffff
+text.color.press=#ffffff
+
+# password
+[textfield]
+text.color.normal=#ffffff
+text.color.hover=#ffffff
+text.color.select=#ffffff
+
+# power options, switch
+[action.button]
+text.color.normal=#ffffff
+text.color.hover=#ffffff
+text.color.press=#ffffff
+text.color.focus=#ffffff

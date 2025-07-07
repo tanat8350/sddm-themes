@@ -38,8 +38,7 @@ TextField {
     font.italic: conf("text.italic")
     font.bold: conf("text.bold")
     Component.onCompleted: if (conf("text.font") != "") font.family = conf("text.font")
-
-    passwordMaskDelay: 500
+    passwordMaskDelay: config.ForceHideCompletePassword == "true" ? undefined : 1000
     passwordCharacter: "\u25cf" //●
 
     Row {
